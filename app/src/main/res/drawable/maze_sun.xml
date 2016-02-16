@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/maze_sun_1"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_sun_2"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_sun_3"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_sun_4"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_sun_5"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_sun_6"
+        android:duration="1000"/>
+
+</animation-list>

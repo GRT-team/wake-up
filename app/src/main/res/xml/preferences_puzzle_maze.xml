@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:summary="@string/pref_puzzle_preview_summary"
+        android:title="@string/pref_puzzle_preview_title" >
+        <intent
+            android:targetClass="com.grt_team.wakeup.entity.puzzle.PuzzleActivityPreview"
+            android:targetPackage="com.grt_team.wakeup" >
+            <extra
+                android:name="puzzleName"
+                android:value="maze" />
+            <extra
+                android:name="puzzlePreviewMode"
+                android:value="true" />
+        </intent>
+    </Preference>
+
+    <com.grt_team.wakeup.preferences.MazeSizeBarPreferences
+        android:defaultValue="@integer/maze_def_size"
+        android:key="pref_puzzle_maze_size"
+        android:title="@string/pref_puzzle_maze_size_title" />
+
+</PreferenceScreen>

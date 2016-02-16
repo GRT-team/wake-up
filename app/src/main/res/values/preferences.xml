@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SeekBarPreferences">
+        <attr name="min" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="summaryFormat" format="string" />
+        <attr name="textIcon" format="integer" />
+        <attr name="dialogIcon" format="integer" />
+    </declare-styleable>
+
+</resources>

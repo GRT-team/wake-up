@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:summary="@string/pref_puzzle_preview_summary"
+        android:title="@string/pref_puzzle_preview_title" >
+        <intent
+            android:targetClass="com.grt_team.wakeup.entity.puzzle.PuzzleActivityPreview"
+            android:targetPackage="com.grt_team.wakeup" >
+            <extra
+                android:name="puzzleName"
+                android:value="mosaic" />
+            <extra
+                android:name="puzzlePreviewMode"
+                android:value="true" />
+        </intent>
+    </Preference>
+
+    <com.grt_team.wakeup.preferences.MosaicSizeBarPreferences
+        android:defaultValue="auto"
+        android:key="pref_puzzle_mosaic_size"
+        android:title="@string/pref_puzzle_mosaic_size_title" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_puzzle_mosaic_use_custom_img"
+        android:title="@string/pref_puzzle_mosaic_use_custom_img_title" />
+
+    <com.grt_team.wakeup.preferences.PickImagePreferences
+        android:defaultValue="default"
+        android:dependency="pref_puzzle_mosaic_use_custom_img"
+        android:key="pref_puzzle_mosaic_image"
+        android:title="@string/pref_puzzle_mosaic_image_title" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_puzzle_mosaic_grid"
+        android:title="@string/pref_puzzle_mosaic_grid_title" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_puzzle_mosaic_bg"
+        android:title="@string/pref_puzzle_mosaic_bg_title" />
+
+</PreferenceScreen>

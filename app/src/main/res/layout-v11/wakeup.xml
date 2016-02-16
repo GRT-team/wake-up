@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false" >
+
+    <fragment
+        android:id="@+id/alarm_clock"
+        android:name="com.grt_team.wakeup.fragment.AlarmClockListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="@drawable/border"
+        android:padding="@dimen/list_padding" >
+
+        <fragment
+            android:id="@+id/alarm_clock_setting"
+            android:name="com.grt_team.wakeup.fragment.AlarmClockSettingListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

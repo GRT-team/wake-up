@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:fragment="com.grt_team.wakeup.fragment.SettingsFragment$MazeSettingsFragment"
+        android:summary="@string/puzzle_maze_summary"
+        android:title="@string/puzzle_maze_title" >
+        <intent
+            android:action="com.grt_team.wakeup.PREFS_PUZZLE_MAZE"
+            android:targetClass="com.grt_team.wakeup.SettingsActivity"
+            android:targetPackage="com.grt_team.wakeup" >
+        </intent>
+    </Preference>
+    <Preference
+        android:fragment="com.grt_team.wakeup.fragment.SettingsFragment$MosaicSettingsFragment"
+        android:summary="@string/puzzle_mosaic_summary"
+        android:title="@string/puzzle_mosaic_title" >
+        <intent
+            android:action="com.grt_team.wakeup.PREFS_PUZZLE_MOSAIC"
+            android:targetClass="com.grt_team.wakeup.SettingsActivity"
+            android:targetPackage="com.grt_team.wakeup" >
+        </intent>
+    </Preference>
+    <Preference
+        android:fragment="com.grt_team.wakeup.fragment.SettingsFragment$CardsSettingsFragment"
+        android:summary="@string/puzzle_card_summary"
+        android:title="@string/puzzle_card_title" >
+        <intent
+            android:action="com.grt_team.wakeup.PREFS_PUZZLE_CARDS"
+            android:targetClass="com.grt_team.wakeup.SettingsActivity"
+            android:targetPackage="com.grt_team.wakeup" >
+        </intent>
+    </Preference>
+
+</PreferenceScreen>

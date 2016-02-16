@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_puzzle_settings">Einstellungen des Rätsels</string>
+    <string name="music_dialog_title">Wählen Sie den Ton</string>
+    <string name="music_silent">Ohne Ton</string>
+    <string name="music_default">In der Standardeinstellung</string>
+    <string name="music_type_ringtone">Wechseln Sie zur Klingeltöne</string>
+    <string name="music_type_music">Wechseln Sie zur Musik</string>
+    <string name="delete_alarm_busy_msg">Der Wecker kann nicht gelöscht werden, weil er aktiv ist</string>
+
+    <!-- Fragment A -->
+    <string name="alarm_clock_header">LISTE DER ALARME</string>
+    <string name="alarm_clock_setting_header">Einstellung des Alarms</string>
+    <string name="alarm_clock_add_alarm">Neuer Alarm</string>
+    <string name="alarm_clock_empty_mgs">Keine Alarme. Erstellen Sie den Wecker, um weiter zu arbeiten</string>
+    <string name="feedback_msg">Vielen Dank für die Nutzung unserer Anwendung. Möchten Sie das Rückgespräch lassen?</string>
+    <string name="feedback_leave">Ja!</string>
+    <string name="feedback_not_today">Später.</string>
+    <string name="feedback_never">Nicht mehr fragen</string>
+    <!-- Fragment A -->
+
+
+    <!-- Fragment B -->
+    <string name="alarm_setting_enable_title">Aktivieren</string>
+    <string name="alarm_setting_time_title">Zeit</string>
+    <string name="alarm_setting_day_title">Wiederholen</string>
+    <string name="alarm_setting_puzzle_title">Rätsel</string>
+    <string name="alarm_setting_sound_title">Ton</string>
+    <string name="alarm_setting_vibrate_title">Vibrationston</string>
+    <string name="alarm_setting_empty_msg">Sie haben keinen Wecker ausgewählt. Wählen Sie den Wecker, um die Einstellungen zu zeigen.</string>
+    <string name="alarm_setting_menu_done">Fertig</string>
+    <string name="next_alarm_day">Tag</string>
+    <string name="next_alarm_days">Tg</string>
+    <string name="next_alarm_hour">Stunde</string>
+    <string name="next_alarm_hours">Std.</string>
+    <string name="next_alarm_minute">Minute</string>
+    <string name="next_alarm_minutes">Min.</string>
+
+    <string-array name="next_alarm_set">
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: weniger als 1 Minute.</item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="DAYS">%1$s %2$s</xliff:g></item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="DAYS">%1$s %2$s</xliff:g> und <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="DAYS">%1$s %2$s</xliff:g> und <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="HOURS">%3$s %4$s</xliff:g> und <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>Die bleibende Zeit, bis der Wecker aktiviert ist: <xliff:g id="DAYS">%1$s %2$s</xliff:g>, <xliff:g id="HOURS">%3$s %4$s</xliff:g> und <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+    </string-array>
+    <!-- Fragment B -->
+
+
+    <!-- PuzzlePicker -->
+    <string name="puzzle_picker_title">Wählen Sie ein Rätsel</string>
+    <!-- PuzzlePicker -->
+
+
+    <!-- DayPicker -->
+    <string name="day_picker_title">Wiederholen</string>
+    <string name="day_picker_never">Keine Wiederholungen</string>
+    <string name="day_picker_every_day">Täglich</string>
+    <!-- DayPicker -->
+
+
+    <!-- ClockDialog -->
+    <string name="clock_menu_delete">Löschen</string>
+    <string name="clock_menu_delete_alarm_title">Wecker löschen</string>
+    <string name="clock_menu_delete_alarm_message">Löschen Sie diesen Wecker?</string>
+    <!-- ClockDialog -->
+
+
+    <!-- Alarm dialog -->
+    <string name="alarm_button_dismiss">Abstellen</string>
+    <string name="alarm_button_snooze">Aufschieben</string>
+    <string name="alarm_button_puzzle">Start des Rätsels</string>
+    <!-- Alarm dialog -->
+
+
+    <!-- Alarm notification -->
+    <string name="alarm_notification_msg">Aufschieben oder abstellen den Wecker</string>
+    <string name="alarm_snooze_notification_msg">Nächste Auslösung um &#160;</string>
+    <string name="alarm_snooze_notification_title">Klicken Sie, um den Alarm zu deaktivieren</string>
+    <!-- Alarm notification -->
+
+
+    <!-- Puzzles -->
+    <string name="puzzle_maze_aim"><![CDATA[<p>Sie müssen für den Abschluss dieses Rätsel ganz von <img alt=\"\" src=\"maze_control_ic\"/> bis <img alt=\"\" src=\"maze_tree_6\" /> gehen</p>]]></string>
+    <string name="puzzle_maze_title">Labyrinth</string>
+    <string name="puzzle_maze_summary">Finden Sie den Weg aus dem Labyrinth</string>
+    <string name="puzzle_mosaic_aim">Sammeln Sie das ganze Bild aus einzelnen Teilen</string>
+    <string name="puzzle_mosaic_title">Mosaik</string>
+    <string name="puzzle_mosaic_summary">Sammeln Sie ein Bild aus einzelnen Teilen</string>
+    <string name="puzzle_card_aim"><![CDATA[<p><b>1. Normal-Modus:</b><br /><i>alle Karten sollen gesetzt werden, wie es im Muster gezeigt ist.</i><br /><b>2. Pokerfans-Spielmodus:</b><br /><i>Pokerhand aus fünf Karten soll gesammelt werden. <br />Zum Beispiel die Kombination \"Hohe Karte\":</i><br /><img src=\"card_clubs_jack\"/><img src=\"card_hearts_10\"/><img src=\"card_clubs_7\"/><img src=\"card_spades_6\"/><img src=\"card_diamonds_3\"/></p>]]></string>
+    <string name="puzzle_card_title">Karten</string>
+    <string name="puzzle_card_summary">Legen Sie die Karte in der gleichen Weise</string>
+    <string name="puzzle_card_comb_high_card">Hohe Karte</string>
+    <string name="puzzle_card_comb_one_pair">Pärchen</string>
+    <string name="puzzle_card_comb_two_pair">Doppelpaar</string>
+    <string name="puzzle_card_comb_three_of_a_kind">Drilling</string>
+    <string name="puzzle_card_comb_straight">Straße</string>
+    <string name="puzzle_card_comb_flush">Flush</string>
+    <string name="puzzle_card_comb_full_house">Full House</string>
+    <string name="puzzle_card_comb_four_of_a_kind">Vierling</string>
+    <string name="puzzle_card_comb_straight_flush">Straße-Flush</string>
+    <string name="puzzle_card_comb_royal_flush">Royal Flush</string>
+    <string name="puzzle_random_title">Zufällige Rätsel</string>
+    <string name="puzzle_close_dialog_title">Zufällige Rätsel</string>
+    <string name="puzzle_close_dialog_msg">Beenden das Rätsel? Der aktuelle Fortschritt wird verloren sein.</string>
+    <string name="puzzle_finish_hint">Rätsel abgeschlossen!</string>
+    <!-- Puzzles -->
+
+
+    <!-- Preferences -->
+    <string name="pref_header_alarm_title">Grundeinstellungen</string>
+    <string name="pref_header_alarm_summary">Wecker Einstellungen</string>
+    <string name="pref_header_puzzle_title">Rätsel Einstellungen</string>
+    <string name="pref_header_puzzle_summary">Einstellungen von jedem Rätsel</string>
+    <string name="pref_alarm_snooz_title">Aufschieben für</string>
+    <string name="pref_rescue_time_title">Abstellen ohne Rätsel</string>
+    <string name="pref_alarm_volume_title">Alarmlautstärke</string>
+    <string name="pref_alarm_volume_summary">Lautstärke einrichten</string>
+    <string name="pref_puzzle_preview_title">Vorschau</string>
+    <string name="pref_puzzle_preview_summary">Rätsel vorschaue</string>
+    <string name="pref_puzzle_maze_size_title">Labyrinth-Größe</string>
+    <string name="pref_puzzle_mosaic_grid_title">Gitter anzeigen</string>
+    <string name="pref_puzzle_mosaic_bg_title">Hintergrundbild</string>
+    <string name="pref_puzzle_mosaic_size_title">Größe des Rätsels</string>
+    <string name="pref_puzzle_mosaic_image_title">Bild</string>
+    <string name="pref_puzzle_mosaic_def_img_title">Standardbild</string>
+    <string name="pref_puzzle_mosaic_use_custom_img_title">Mein Bild</string>
+    <string name="pref_puzzle_cards_task_number_title">Karten zum Sammeln</string>
+    <string name="pref_puzzle_cards_task_number_summary">Anzahl: %1$s</string>
+    <string name="pref_puzzle_cards_shuffle_title">Mische das Deck</string>
+    <string name="pref_puzzle_cards_poker_comb_title">Pokerhände</string>
+    <string name="pref_puzzle_cards_poker_comb_summary">Nur die Namen der Kombinationen angezeigt werden werden angezeigt</string>
+    <string name="pref_puzzle_cards_deck_size_title">Die Anzahl der Karten im Deck</string>
+
+    <string-array name="snooze_time_titles">
+        <item>5 Minuten</item>
+        <item>10 Minuten</item>
+        <item>15 Minuten</item>
+        <item>20 Minuten</item>
+        <item>25 Minuten</item>
+        <item>30 Minuten</item>
+    </string-array>
+    <string-array name="puzzle_cards_deck_size_titles">
+        <item>24 Karten</item>
+        <item>36 Karten</item>
+        <item>52 Karten</item>
+    </string-array>
+    <string-array name="rescue_time_titles">
+        <item>Nicht erlauben</item>
+        <item>Irgendwann</item>
+        <item>Nach 15 Sekunden</item>
+        <item>Nach 1 Minute</item>
+        <item>Nach 2 Minuten</item>
+        <item>Nach 5 Minuten</item>
+    </string-array>
+    <!-- Preferences -->
+
+
+    <!-- Switch button -->
+    <string name="switch_button_on">AN</string>
+    <string name="switch_button_off">AUS</string>
+    <!-- Switch button -->
+
+
+    <!-- Rescue -->
+    <string name="rescue_dialog_off_btn">Schalten den Wecker!</string>
+    <string name="rescue_dialog_cancel_btn">Schließen</string>
+    <string name="rescue_toast_time_disabled">Diese Funktion ist in den Einstellungen deaktiviert.</string>
+    <string name="rescue_toast_already_stopped">Der Wecker ist schon deaktiviert.</string>
+    <string name="rescue_activity_msg">m den Wecker zu deaktivieren, klicken Sie \"%1$s\" um das Rätsel weiterzumachen, klicken Sie \"%2$s\".</string>
+    <string name="rescue_stop">Ab.</string>
+    <string name="rescue_back">Vor</string>
+    <string name="rescue_toast_second">Sekunden</string>
+    <string name="rescue_toast_seconds">sec.</string>
+    <string name="rescue_toast_minute">Minute</string>
+    <string name="rescue_toast_minutes">Min.</string>
+
+    <string-array name="rescue_toast_time_remain">
+        <item>Ausschaltung ist in: %2$s möglich</item>
+        <item>Ausschaltung ist in: %1$s %2$s möglich</item>
+    </string-array>
+    <!-- Rescue -->
+
+</resources>

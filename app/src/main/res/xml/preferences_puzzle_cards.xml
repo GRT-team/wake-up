@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sb="http://schemas.android.com/apk/res/com.grt_team.wakeup" >
+
+    <Preference
+        android:summary="@string/pref_puzzle_preview_summary"
+        android:title="@string/pref_puzzle_preview_title" >
+        <intent
+            android:targetClass="com.grt_team.wakeup.entity.puzzle.PuzzleActivityPreview"
+            android:targetPackage="com.grt_team.wakeup" >
+            <extra
+                android:name="puzzleName"
+                android:value="cards" />
+            <extra
+                android:name="puzzlePreviewMode"
+                android:value="true" />
+        </intent>
+    </Preference>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:disableDependentsState="true"
+        android:key="pref_puzzle_cards_poker_comb"
+        android:summary="@string/pref_puzzle_cards_poker_comb_summary"
+        android:title="@string/pref_puzzle_cards_poker_comb_title" />
+
+    <com.grt_team.wakeup.preferences.SeekBarPreferences
+        android:defaultValue="3"
+        android:dependency="pref_puzzle_cards_poker_comb"
+        android:key="pref_puzzle_cards_task_number"
+        android:title="@string/pref_puzzle_cards_task_number_title"
+        sb:max="10"
+        sb:min="1"
+        sb:summaryFormat="@string/pref_puzzle_cards_task_number_summary" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_puzzle_cards_shuffle"
+        android:persistent="true"
+        android:title="@string/pref_puzzle_cards_shuffle_title" />
+
+    <com.grt_team.wakeup.preferences.SummaryListPreference
+        android:defaultValue="24"
+        android:entries="@array/puzzle_cards_deck_size_titles"
+        android:entryValues="@array/puzzle_cards_deck_size_values"
+        android:key="pref_puzzle_cards_deck_size"
+        android:persistent="true"
+        android:title="@string/pref_puzzle_cards_deck_size_title" />
+
+</PreferenceScreen>

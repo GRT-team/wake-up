@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.grt_team.wakeup.view.SwitchButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alarm_enable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:textColor="@android:color/white"
+    android:textSize="15sp" />

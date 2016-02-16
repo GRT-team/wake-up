@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="holo_blue">#ff33b5e5</color>
+    <color name="maze_ground_color">#ff765310</color>
+    <color name="clock_header">#ef5a5a</color>
+    <color name="puzzle_title_bg">#212121</color>
+    <color name="puzzle_title_text_color">#dfdfdf</color>
+</resources>
