@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/puzzle_rescue_button"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:background="@android:color/transparent"
+    android:contentDescription="@null"
+    android:scaleType="fitCenter"
+    android:src="@drawable/puzzle_rescue_button" />

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="menu_settings">Налаштування</string>
+    <string name="menu_puzzle_settings">Налаштування пазлів</string>
+    <string name="music_dialog_title">Виберіть сигнал</string>
+    <string name="music_silent">Без звуку</string>
+    <string name="music_default">По замовчуванню</string>
+    <string name="music_type_ringtone">Переключитись до рінгтонів</string>
+    <string name="music_type_music">Переключитись до музики</string>
+    <string name="delete_alarm_busy_msg">Неможливо видалити будильник доки він активний</string>
+
+    <!-- Fragment A -->
+    <string name="alarm_clock_header">СПИСОК БУДИЛЬНИКІВ</string>
+    <string name="alarm_clock_setting_header">НАЛАШТУВАННЯ БУДИЛЬНИКА</string>
+    <string name="alarm_clock_add_alarm">Новий будильник</string>
+    <string name="alarm_clock_empty_mgs">Немає будильників. Створіть будильник для продовження роботи.</string>
+    <string name="feedback_msg">Дякуємо за те що користуєтесь нашою програмою. Не бажаєте залишити відгук?</string>
+    <string name="feedback_leave">Так!</string>
+    <string name="feedback_not_today">Не зараз</string>
+    <string name="feedback_never">Більше не питати</string>
+    <!-- Fragment A -->
+
+
+    <!-- Fragment B -->
+    <string name="alarm_setting_enable_title">Увімкнути</string>
+    <string name="alarm_setting_time_title">Час</string>
+    <string name="alarm_setting_day_title">Повторити</string>
+    <string name="alarm_setting_puzzle_title">Пазл</string>
+    <string name="alarm_setting_sound_title">Сигнал</string>
+    <string name="alarm_setting_vibrate_title">Вібросигнал</string>
+    <string name="alarm_setting_empty_msg">Не вибрано жодного будильника. Виберіть будильник щоб показати його налаштування.</string>
+    <string name="alarm_setting_menu_done">Готово</string>
+    <string name="next_alarm_day">день</string>
+    <string name="next_alarm_days">дн.</string>
+    <string name="next_alarm_hour">година</string>
+    <string name="next_alarm_hours">год.</string>
+    <string name="next_alarm_minute">хвилина</string>
+    <string name="next_alarm_minutes">хв.</string>
+
+    <string-array name="next_alarm_set">
+        <item>Час до активації цього будильника: менше 1 хв.</item>
+        <item>Час до активації цього будильника: <xliff:g id="DAYS">%1$s %2$s</xliff:g></item>
+        <item>Час до активації цього будильника: <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>Час до активації цього будильника: <xliff:g id="DAYS">%1$s %2$s</xliff:g> і <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>Час до активації цього будильника: <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>Час до активації цього будильника: <xliff:g id="DAYS">%1$s %2$s</xliff:g> і <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>Час до активації цього будильника: <xliff:g id="HOURS">%3$s %4$s</xliff:g> і <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>Час до активації цього будильника: <xliff:g id="DAYS">%1$s %2$s</xliff:g>, <xliff:g id="HOURS">%3$s %4$s</xliff:g> і <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+    </string-array>
+    <!-- Fragment B -->
+
+
+    <!-- PuzzlePicker -->
+    <string name="puzzle_picker_title">Виберіть пазл</string>
+    <!-- PuzzlePicker -->
+
+
+    <!-- DayPicker -->
+    <string name="day_picker_title">Повторити</string>
+    <string name="day_picker_never">Без повторів</string>
+    <string name="day_picker_every_day">Щодня</string>
+    <!-- DayPicker -->
+
+
+    <!-- ClockDialog -->
+    <string name="clock_menu_delete">Видалити</string>
+    <string name="clock_menu_delete_alarm_title">Видалити будильник</string>
+    <string name="clock_menu_delete_alarm_message">Ви справді хочете видалити цей будильник?</string>
+    <!-- ClockDialog -->
+
+
+    <!-- Alarm dialog -->
+    <string name="alarm_button_dismiss">Вимкнути</string>
+    <string name="alarm_button_snooze">Відкласти</string>
+    <string name="alarm_button_puzzle">Запустити пазл</string>
+    <!-- Alarm dialog -->
+
+
+    <!-- Alarm notification -->
+    <string name="alarm_notification_msg">Відкласти або вимкнути будильник</string>
+    <string name="alarm_snooze_notification_msg">Наступне спрацювання о &#160;</string>
+    <string name="alarm_snooze_notification_title">Натисніть для вимкнення будильника</string>
+    <!-- Alarm notification -->
+
+
+    <!-- Puzzles -->
+    <string name="puzzle_maze_aim"><![CDATA[<p>Для рішення даного пазлу необхідно пройти шлях від <img alt=\"\" src=\"maze_control_ic\"/> до <img alt=\"\" src=\"maze_tree_6\" /></p>]]></string>
+    <string name="puzzle_maze_title">Лабіринт</string>
+    <string name="puzzle_maze_summary">Знайдіть вихід з лабіринту</string>
+    <string name="puzzle_mosaic_aim">Зберіть повне зображення з частин</string>
+    <string name="puzzle_mosaic_title">Мозаїка</string>
+    <string name="puzzle_mosaic_summary">Зберіть зображення з частин</string>
+    <string name="puzzle_card_aim"><![CDATA[<p><b>1. Звичайний режим:</b><br /><i>Всі карти повинні бути розміщені так як це показано у завданні.</i><br /><b>2. Режим покеру:</b><br /><i>Потрібно зібрати повну покерну комбінацію з п\'яти карт. <br />Наприклад комбінація \"Старша Карта\":</i><br /><img src=\"card_clubs_jack\"/><img src=\"card_hearts_10\"/><img src=\"card_clubs_7\"/><img src=\"card_spades_6\"/><img src=\"card_diamonds_3\"/></p>]]></string>
+    <string name="puzzle_card_title">Карти</string>
+    <string name="puzzle_card_summary">Розташуйте карти в заданому порядку</string>
+    <string name="puzzle_card_comb_high_card">Старша карта</string>
+    <string name="puzzle_card_comb_one_pair">Пара</string>
+    <string name="puzzle_card_comb_two_pair">Дві пари</string>
+    <string name="puzzle_card_comb_three_of_a_kind">Сет</string>
+    <string name="puzzle_card_comb_straight">Стріт</string>
+    <string name="puzzle_card_comb_flush">Флеш</string>
+    <string name="puzzle_card_comb_full_house">Фул-хаус</string>
+    <string name="puzzle_card_comb_four_of_a_kind">Каре</string>
+    <string name="puzzle_card_comb_straight_flush">Стріт-флеш</string>
+    <string name="puzzle_card_comb_royal_flush">Ройал-флеш</string>
+    <string name="puzzle_random_title">Випадковий пазл</string>
+    <string name="puzzle_close_dialog_title">Завершити пазл</string>
+    <string name="puzzle_close_dialog_msg">Завершити пазл? Поточний прогрес буде втрачено.</string>
+    <string name="puzzle_finish_hint">Пазл пройдено!</string>
+    <!-- Puzzles -->
+
+
+    <!-- Preferences -->
+    <string name="pref_header_alarm_title">Загальні налаштування</string>
+    <string name="pref_header_alarm_summary">Налаштування будильника</string>
+    <string name="pref_header_puzzle_title">Налаштування пазлів</string>
+    <string name="pref_header_puzzle_summary">Налаштування кожного із пазлів</string>
+    <string name="pref_alarm_snooz_title">Відкласти на</string>
+    <string name="pref_rescue_time_title">Вимикання без пазла</string>
+    <string name="pref_alarm_volume_title">Гучність будильника</string>
+    <string name="pref_alarm_volume_summary">Встановити гучність</string>
+    <string name="pref_puzzle_preview_title">Попередній перегляд</string>
+    <string name="pref_puzzle_preview_summary">Переглянути пазл</string>
+    <string name="pref_puzzle_maze_size_title">Розмір лабіринту</string>
+    <string name="pref_puzzle_mosaic_grid_title">Показувати сітку</string>
+    <string name="pref_puzzle_mosaic_bg_title">Зображення на фоні</string>
+    <string name="pref_puzzle_mosaic_size_title">Розмір пазлу</string>
+    <string name="pref_puzzle_mosaic_image_title">Зображення</string>
+    <string name="pref_puzzle_mosaic_def_img_title">За замовчуванням</string>
+    <string name="pref_puzzle_mosaic_use_custom_img_title">Моє зображення</string>
+    <string name="pref_puzzle_cards_task_number_title">Карт необхідно зібрати</string>
+    <string name="pref_puzzle_cards_task_number_summary">Кількість: %1$s</string>
+    <string name="pref_puzzle_cards_shuffle_title">Перемішати колоду</string>
+    <string name="pref_puzzle_cards_poker_comb_title">Комбінації покеру</string>
+    <string name="pref_puzzle_cards_poker_comb_summary">Тільки імена комбінацій будуть показані</string>
+    <string name="pref_puzzle_cards_deck_size_title">Кількість карт у колоді</string>
+
+    <string-array name="snooze_time_titles">
+        <item>5 хвилин</item>
+        <item>10 хвилин</item>
+        <item>15 хвилин</item>
+        <item>20 хвилин</item>
+        <item>25 хвилин</item>
+        <item>30 хвилин</item>
+    </string-array>
+    <string-array name="puzzle_cards_deck_size_titles">
+        <item>24 карти</item>
+        <item>36 карт</item>
+        <item>52 карти</item>
+    </string-array>
+    <string-array name="rescue_time_titles">
+        <item>Не дозволяти</item>
+        <item>Будь-коли</item>
+        <item>Після 15 секунд</item>
+        <item>Після 1 хвилини</item>
+        <item>Після 2 хвилини</item>
+        <item>Після 5 хвилин</item>
+    </string-array>
+    <!-- Preferences -->
+
+
+    <!-- Switch button -->
+    <string name="switch_button_on">УВІМК</string>
+    <string name="switch_button_off">ВИМК</string>
+    <!-- Switch button -->
+
+
+    <!-- Rescue -->
+    <string name="rescue_dialog_off_btn">ВИКЛЮЧИТИ Будильник!</string>
+    <string name="rescue_dialog_cancel_btn">Закрити</string>
+    <string name="rescue_toast_time_disabled">Ця функція вимкнена в налаштуваннях.</string>
+    <string name="rescue_toast_already_stopped">Будильник уже вимкнуто.</string>
+    <string name="rescue_activity_msg">Ви можете вимкнути поточний будильник нажавши \"%1$s\" або повернутися до пазлу нажавши \"%2$s\".</string>
+    <string name="rescue_stop">Вимк.</string>
+    <string name="rescue_back">Назад</string>
+    <string name="rescue_toast_second">секунда</string>
+    <string name="rescue_toast_seconds">сек.</string>
+    <string name="rescue_toast_minute">хвилина</string>
+    <string name="rescue_toast_minutes">хв.</string>
+
+    <string-array name="rescue_toast_time_remain">
+        <item>Вимкнення буде доступне через: %2$s</item>
+        <item>Вимкнення буде доступне через: %1$s %2$s</item>
+    </string-array>
+    <!-- Rescue -->
+
+</resources>

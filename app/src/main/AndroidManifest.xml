@@ -1,0 +1,91 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grt_team.wakeup"
+    android:versionCode="5"
+    android:versionName="1.2.1" >
+
+    <compatible-screens>
+        <screen android:screenDensity="mdpi" />
+        <screen android:screenDensity="hdpi" />
+        <screen android:screenDensity="xhdpi" />
+    </compatible-screens>
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".WakeUpActivity"
+            android:label="@string/title_activity_wake_up" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".entity.puzzle.PuzzleActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".entity.puzzle.PuzzleActivityPreview"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".entity.puzzle.PuzzleRescueActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/FullScreen" />
+        <activity android:name="AlarmClockSettingActivity" />
+        <activity
+            android:name=".dialog.AlarmDialog"
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.grt_team.wakeup.dialog"
+            android:theme="@android:style/Theme.Panel" />
+        <activity
+            android:name=".dialog.FullScreenAlarmDialog"
+            android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.grt_team.wakeup.dialog"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar" />
+
+        <service android:name=".services.AudioService" />
+
+        <receiver
+            android:name=".broadcast.AlarmReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.grt_team.wakeup.ACTION_ALARM" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.InitReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+    </application>
+
+</manifest>

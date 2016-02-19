@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="menu_settings">Ajustes</string>
+    <string name="menu_puzzle_settings">Ajustes de los puzzles</string>
+    <string name="music_dialog_title">Eliga la señal</string>
+    <string name="music_silent">Modo silencio</string>
+    <string name="music_default">Modo predeterminado</string>
+    <string name="music_type_ringtone">Pasar a los tonos de timbre</string>
+    <string name="music_type_music">Pasar a la música</string>
+    <string name="delete_alarm_busy_msg">No es possible suprimir la alarma en tanto que está activo</string>
+
+    <!-- Fragment A -->
+    <string name="alarm_clock_header">La lista de alarmas</string>
+    <string name="alarm_clock_setting_header">Ajustes de alarmas</string>
+    <string name="alarm_clock_add_alarm">Crear la alarma nueva</string>
+    <string name="alarm_clock_empty_mgs">No hay ningúnas alarmas activas. Crea la alarma para continuar el trabajo</string>
+    <string name="feedback_msg">Gracias por usar nuestra aplicación. ¿Qisiere dejar en eco?</string>
+    <string name="feedback_leave">¡Sí!</string>
+    <string name="feedback_not_today">No ahora</string>
+    <string name="feedback_never">No preguntar más</string>
+    <!-- Fragment A -->
+
+
+    <!-- Fragment B -->
+    <string name="alarm_setting_enable_title">Enable</string>
+    <string name="alarm_setting_time_title">Tiempo</string>
+    <string name="alarm_setting_day_title">Repetir</string>
+    <string name="alarm_setting_puzzle_title">Puzzle</string>
+    <string name="alarm_setting_sound_title">Señal</string>
+    <string name="alarm_setting_vibrate_title">Señal de vibro</string>
+    <string name="alarm_setting_empty_msg">No hay ningúnas alarmas activas. Eliga la señal para operar sus adjustes</string>
+    <string name="alarm_setting_menu_done">Está hecho</string>
+    <string name="next_alarm_day">día</string>
+    <string name="next_alarm_days">días</string>
+    <string name="next_alarm_hour">hora</string>
+    <string name="next_alarm_hours">hrs</string>
+    <string name="next_alarm_minute">minuto</string>
+    <string name="next_alarm_minutes">min.</string>
+
+    <string-array name="next_alarm_set">
+        <item>El tiempo queda hasta la activación de esta alarma: Menos de un minuto</item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="DAYS">%1$s %2$s</xliff:g></item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="DAYS">%1$s %2$s</xliff:g> y <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="DAYS">%1$s %2$s</xliff:g> y <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="HOURS">%3$s %4$s</xliff:g> y <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>El tiempo queda hasta la activación de esta alarma: <xliff:g id="DAYS">%1$s %2$s</xliff:g>, <xliff:g id="HOURS">%3$s %4$s</xliff:g> y <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+    </string-array>
+    <!-- Fragment B -->
+
+
+    <!-- PuzzlePicker -->
+    <string name="puzzle_picker_title">Elige el puzzle</string>
+    <!-- PuzzlePicker -->
+
+
+    <!-- DayPicker -->
+    <string name="day_picker_title">Repetir</string>
+    <string name="day_picker_never">Sin repasos</string>
+    <string name="day_picker_every_day">Diariamente</string>
+    <!-- DayPicker -->
+
+
+    <!-- ClockDialog -->
+    <string name="clock_menu_delete">Suprimir</string>
+    <string name="clock_menu_delete_alarm_title">Suprimir la alarma</string>
+    <string name="clock_menu_delete_alarm_message">¿Suprimir este alarma?</string>
+    <!-- ClockDialog -->
+
+
+    <!-- Alarm dialog -->
+    <string name="alarm_button_dismiss">Apagar</string>
+    <string name="alarm_button_snooze">Soñar</string>
+    <string name="alarm_button_puzzle">Arrancar el puzzle</string>
+    <!-- Alarm dialog -->
+
+
+    <!-- Alarm notification -->
+    <string name="alarm_notification_msg">Soñar o apagar la alarma</string>
+    <string name="alarm_snooze_notification_msg">El próximo activación tendrá lugar en &#160;</string>
+    <string name="alarm_snooze_notification_title">Toque para apagar la alarma</string>
+    <!-- Alarm notification -->
+
+
+    <!-- Puzzles -->
+    <string name="puzzle_maze_aim"><![CDATA[<p>Para completar este puzzle tiene que pasar de <img alt=\"\" src=\"maze_control_ic\"/> a <img alt=\"\" src=\"maze_tree_6\" /></p>]]></string>
+    <string name="puzzle_maze_title">El laberinto</string>
+    <string name="puzzle_maze_summary">Descubra la salida del laberinto</string>
+    <string name="puzzle_mosaic_aim">Recoga la imagen completa de los partes dispersos</string>
+    <string name="puzzle_mosaic_title">El mosáico</string>
+    <string name="puzzle_mosaic_summary">Recoga la imagen de los partes</string>
+    <string name="puzzle_card_aim"><![CDATA[<p><b>1. El modo simple:</b><br /><i>Todas las cartas tienen que estar dispuestas de modo descrito en la tarea.</i><br /><b>2. El modo de póquer:</b><br /><i>Es necesito recoger la combinación completa de póquer. <br />Por ejemplo, la combinación \"Carta alta\":</i><br /><img src=\"card_clubs_jack\"/><img src=\"card_hearts_10\"/><img src=\"card_clubs_7\"/><img src=\"card_spades_6\"/><img src=\"card_diamonds_3\"/></p>]]></string>
+    <string name="puzzle_card_title">Las cartas</string>
+    <string name="puzzle_card_summary">Disponga las cartas en el mismo orden</string>
+    <string name="puzzle_card_comb_high_card">Carta alta</string>
+    <string name="puzzle_card_comb_one_pair">Pareja</string>
+    <string name="puzzle_card_comb_two_pair">Dobles parejas</string>
+    <string name="puzzle_card_comb_three_of_a_kind">Trío</string>
+    <string name="puzzle_card_comb_straight">Escalera</string>
+    <string name="puzzle_card_comb_flush">Color</string>
+    <string name="puzzle_card_comb_full_house">Full</string>
+    <string name="puzzle_card_comb_four_of_a_kind">Póker</string>
+    <string name="puzzle_card_comb_straight_flush">Escalera de color</string>
+    <string name="puzzle_card_comb_royal_flush">Escalera real o flor imperial</string>
+    <string name="puzzle_random_title">El puzzle al azar</string>
+    <string name="puzzle_close_dialog_title">Completar el puzzle</string>
+    <string name="puzzle_close_dialog_msg">¿Completar el puzzle? El progreso corriente sera perdido</string>
+    <string name="puzzle_finish_hint">¡El puzzle es completo!</string>
+    <!-- Puzzles -->
+
+
+    <!-- Preferences -->
+    <string name="pref_header_alarm_title">Ajustes generales</string>
+    <string name="pref_header_alarm_summary">Los ajustes de la alarma</string>
+    <string name="pref_header_puzzle_title">Los ajustes de los puzzles</string>
+    <string name="pref_header_puzzle_summary">Los ajustes de cada uno de los puzzles</string>
+    <string name="pref_alarm_snooz_title">Soñar hasta</string>
+    <string name="pref_rescue_time_title">Desconexión sin el puzzle</string>
+    <string name="pref_alarm_volume_title">Intensidad de la alarma</string>
+    <string name="pref_alarm_volume_summary">Instalar la intensidad</string>
+    <string name="pref_puzzle_preview_title">El preestreno previo</string>
+    <string name="pref_puzzle_preview_summary">Ver al puzzle</string>
+    <string name="pref_puzzle_maze_size_title">El tamaño del laberinto</string>
+    <string name="pref_puzzle_mosaic_grid_title">Demostrar la red</string>
+    <string name="pref_puzzle_mosaic_bg_title">El imagen en el fondo</string>
+    <string name="pref_puzzle_mosaic_size_title">El tamaño del puzzle</string>
+    <string name="pref_puzzle_mosaic_image_title">El imagen</string>
+    <string name="pref_puzzle_mosaic_def_img_title">El imagen predeterminado</string>
+    <string name="pref_puzzle_mosaic_use_custom_img_title">Mi imagen</string>
+    <string name="pref_puzzle_cards_task_number_title">Cartas para recoger</string>
+    <string name="pref_puzzle_cards_task_number_summary">El número: %1$s</string>
+    <string name="pref_puzzle_cards_shuffle_title">Mezclar la baraja</string>
+    <string name="pref_puzzle_cards_poker_comb_title">Combinaciones de póquer.</string>
+    <string name="pref_puzzle_cards_poker_comb_summary">Va a ver sólo las nombres de combinaciones</string>
+    <string name="pref_puzzle_cards_deck_size_title">El número de cartas en la baraja</string>
+
+    <string-array name="snooze_time_titles">
+        <item>5 minutos</item>
+        <item>10 minutos</item>
+        <item>15 minutos</item>
+        <item>20 minutos</item>
+        <item>25 minutos</item>
+        <item>30 minutos</item>
+    </string-array>
+    <string-array name="puzzle_cards_deck_size_titles">
+        <item>24 cartas</item>
+        <item>36 cartas</item>
+        <item>52 cartas</item>
+    </string-array>
+    <string-array name="rescue_time_titles">
+        <item>No autorizar</item>
+        <item>Cualquier día</item>
+        <item>Dentro de 15 segundos</item>
+        <item>Dentro de un minuto</item>
+        <item>Dentro de dos minutos</item>
+        <item>Dentro de tres minutos</item>
+    </string-array>
+    <!-- Preferences -->
+
+
+    <!-- Switch button -->
+    <string name="switch_button_on">SI</string>
+    <string name="switch_button_off">NO</string>
+    <!-- Switch button -->
+
+
+    <!-- Rescue -->
+    <string name="rescue_dialog_off_btn">Apagar la alarma</string>
+    <string name="rescue_dialog_cancel_btn">Cerrar</string>
+    <string name="rescue_toast_time_disabled">Esta función está inactiva en las ajustes</string>
+    <string name="rescue_toast_already_stopped">La alarma está apagada ya</string>
+    <string name="rescue_activity_msg">Puede apagar la alarma corriente al tocado  \"%1$s\" o regresar a los puzzles al tocado \"%2$s\".</string>
+    <string name="rescue_stop">No.</string>
+    <string name="rescue_back">Atrás</string>
+    <string name="rescue_toast_second">segundo</string>
+    <string name="rescue_toast_seconds">seg.</string>
+    <string name="rescue_toast_minute">minuto</string>
+    <string name="rescue_toast_minutes">min.</string>
+
+    <string-array name="rescue_toast_time_remain">
+        <item>Desconexión será possible dentro de: %2$s</item>
+        <item>Desconexión será possible dentro de: %1$s %2$s</item>
+    </string-array>
+    <!-- Rescue -->
+
+</resources>

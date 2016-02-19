@@ -1,0 +1,200 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Wake Up</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_puzzle_settings">Puzzles Setting</string>
+    <string name="title_activity_wake_up">Wake Up</string>
+    <string name="music_dialog_title">Select sound</string>
+    <string name="music_silent">Silent</string>
+    <string name="music_default">Default</string>
+    <string name="music_type_ringtone">Switch to ringtone</string>
+    <string name="music_type_music">Switch to music</string>
+    <string name="delete_alarm_busy_msg">Can\'t delete alarm which is already running</string>
+
+    <!-- Fragment A -->
+    <string name="alarm_clock_header">ALARMS</string>
+    <string name="alarm_clock_setting_header">ALARM DETAILS</string>
+    <string name="alarm_clock_add_alarm">Add alarm</string>
+    <string name="alarm_clock_empty_mgs">No alarms yet. Click on button to add alarm.</string>
+    <string name="feedback_msg">Thanks for using this application. Would you like to leave a comment?</string>
+    <string name="feedback_leave">Yes!</string>
+    <string name="feedback_not_today">Not now</string>
+    <string name="feedback_never">Never ask</string>
+    <!-- Fragment A -->
+
+
+    <!-- Fragment B -->
+    <string name="alarm_setting_enable_title">Enable</string>
+    <string name="alarm_setting_time_title">Time</string>
+    <string name="alarm_setting_day_title">Repeat</string>
+    <string name="alarm_setting_puzzle_title">Puzzle</string>
+    <string name="alarm_setting_sound_title">Sound</string>
+    <string name="alarm_setting_vibrate_title">Vibrate</string>
+    <string name="alarm_setting_empty_msg">No alarm selected. Select alarm to show settings.</string>
+    <string name="alarm_setting_menu_done">Done</string>
+    <string name="next_alarm_day">day</string>
+    <string name="next_alarm_days">days</string>
+    <string name="next_alarm_hour">hour</string>
+    <string name="next_alarm_hours">hours</string>
+    <string name="next_alarm_minute">minute</string>
+    <string name="next_alarm_minutes">minutes</string>
+
+    <string-array name="next_alarm_set">
+        <item>This alarm will play in less then a minute</item>
+        <item>This alarm will play in: <xliff:g id="DAYS">%1$s %2$s</xliff:g></item>
+        <item>This alarm will play in: <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>This alarm will play in: <xliff:g id="DAYS">%1$s %2$s</xliff:g> and <xliff:g id="HOURS">%3$s %4$s</xliff:g></item>
+        <item>This alarm will play in: <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>This alarm will play in: <xliff:g id="DAYS">%1$s %2$s</xliff:g> and <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>This alarm will play in: <xliff:g id="HOURS">%3$s %4$s</xliff:g> and <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+        <item>This alarm will play in: <xliff:g id="DAYS">%1$s %2$s</xliff:g>, <xliff:g id="HOURS">%3$s %4$s</xliff:g> and <xliff:g id="MINUTES">%5$s %6$s</xliff:g></item>
+    </string-array>
+    <!-- Fragment B -->
+
+
+    <!-- PuzzlePicker -->
+    <string name="puzzle_picker_title">Select puzzle</string>
+    <!-- PuzzlePicker -->
+
+
+    <!-- DayPicker -->
+    <string name="day_picker_title">Repeat</string>
+    <string name="day_picker_never">Do not repeat</string>
+    <string name="day_picker_every_day">Every day</string>
+    <!-- DayPicker -->
+
+
+    <!-- ClockDialog -->
+    <string name="clock_menu_delete">Delete</string>
+    <string name="clock_menu_delete_alarm_title">Delete alarm</string>
+    <string name="clock_menu_delete_alarm_message">Delete this alarm?</string>
+    <!-- ClockDialog -->
+
+
+    <!-- Alarm dialog -->
+    <string name="alarm_button_dismiss">Dismiss</string>
+    <string name="alarm_button_snooze">Snooze</string>
+    <string name="alarm_button_puzzle">Begin</string>
+    <!-- Alarm dialog -->
+
+
+    <!-- Alarm notification -->
+    <string name="alarm_notification_msg">Snooze or dismiss the alarm</string>
+    <string name="alarm_snooze_notification_msg">Next alarm on&#160;</string>
+    <string name="alarm_snooze_notification_title">Click to dismiss the alarm</string>
+    <!-- Alarm notification -->
+
+
+    <!-- Puzzles -->
+    <string name="puzzle_maze_aim"><![CDATA[<p>To solve this puzzle find the way starting from <img alt=\"\" src=\"maze_control_ic\"/> and finishing at <img alt=\"\" src=\"maze_tree_6\" /></p>]]></string>
+    <string name="puzzle_maze_title">Maze</string>
+    <string name="puzzle_maze_summary">Find the way out of the maze</string>
+    <string name="puzzle_mosaic_aim">Assemble full image out from of numerous pieces</string>
+    <string name="puzzle_mosaic_title">Mosaic puzzle</string>
+    <string name="puzzle_mosaic_summary">Assemble image out of pieces</string>
+    <string name="puzzle_card_aim"><![CDATA[<p><b>1. Simple mode:</b><br /><i>All cards need to be placed as it is shown on the bar</i><br /><b>2. Poker mode:</b><br /><i>Full poker combination of five cards needs to be collected. <br />E.g. High card(Jack):</i><br /><img src=\"card_clubs_jack\"/><img src=\"card_hearts_10\"/><img src=\"card_clubs_7\"/><img src=\"card_spades_6\"/><img src=\"card_diamonds_3\"/></p>]]></string>
+    <string name="puzzle_card_title">Card puzzle</string>
+    <string name="puzzle_card_summary">Arrange cards the same order</string>
+    <string name="puzzle_card_comb_high_card">High card</string>
+    <string name="puzzle_card_comb_one_pair">One pairs</string>
+    <string name="puzzle_card_comb_two_pair">Two pair</string>
+    <string name="puzzle_card_comb_three_of_a_kind">Three of a kind</string>
+    <string name="puzzle_card_comb_straight">Straight</string>
+    <string name="puzzle_card_comb_flush">Flush</string>
+    <string name="puzzle_card_comb_full_house">Full house</string>
+    <string name="puzzle_card_comb_four_of_a_kind">Four of a kind</string>
+    <string name="puzzle_card_comb_straight_flush">Straight flush</string>
+    <string name="puzzle_card_comb_royal_flush">Royal flush</string>
+    <string name="puzzle_random_title">Random puzzle</string>
+    <string name="puzzle_close_dialog_title">Close puzzle</string>
+    <string name="puzzle_close_dialog_msg">Do you want to close the puzzle? All your progress will be lost.</string>
+    <string name="puzzle_finish_hint">The puzzle is completed!</string>
+    <!-- Puzzles -->
+
+
+    <!-- Preferences -->
+    <string name="pref_header_alarm_title">Main settings</string>
+    <string name="pref_header_alarm_summary">Setup alarm settings</string>
+    <string name="pref_header_puzzle_title">Puzzles settings</string>
+    <string name="pref_header_puzzle_summary">Setup each puzzle</string>
+    <string name="pref_alarm_snooz_title">Snooze duration</string>
+    <string name="pref_rescue_time_title">Allow rescue button</string>
+    <string name="pref_auto_turn_off_time_title">Auto snooze time</string>
+    <string name="pref_alarm_volume_title">Alarm volume</string>
+    <string name="pref_alarm_volume_summary">Set the volume of alarms</string>
+    <string name="pref_puzzle_preview_title">Preview</string>
+    <string name="pref_puzzle_preview_summary">Check the puzzle</string>
+    <string name="pref_puzzle_maze_size_title">Maze size</string>
+    <string name="pref_puzzle_mosaic_grid_title">Show grid</string>
+    <string name="pref_puzzle_mosaic_bg_title">Show image on background</string>
+    <string name="pref_puzzle_mosaic_size_title">Puzzle size</string>
+    <string name="pref_puzzle_mosaic_image_title">Image</string>
+    <string name="pref_puzzle_mosaic_def_img_title">Default image</string>
+    <string name="pref_puzzle_mosaic_use_custom_img_title">Use custom image</string>
+    <string name="pref_puzzle_cards_task_number_title">Number of cards to collect</string>
+    <string name="pref_puzzle_cards_task_number_summary">%1$s card(s)</string>
+    <string name="pref_puzzle_cards_shuffle_title">Shuffle card deck</string>
+    <string name="pref_puzzle_cards_poker_comb_title">Poker combination</string>
+    <string name="pref_puzzle_cards_poker_comb_summary">Only name of combination will be shown</string>
+    <string name="pref_puzzle_cards_deck_size_title">Cards in the deck</string>
+
+    <string-array name="snooze_time_titles">
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+    <string-array name="puzzle_cards_deck_size_titles">
+        <item>24 cards</item>
+        <item>36 cards</item>
+        <item>52 cards</item>
+    </string-array>
+    <string-array name="rescue_time_titles">
+        <item>Do not allow</item>
+        <item>Any time</item>
+        <item>After 15 sec</item>
+        <item>After 1 min</item>
+        <item>After 2 min</item>
+        <item>After 5 min</item>
+    </string-array>
+    <string-array name="auto_turn_off_time_titles">
+        <item>After 1 min</item>
+        <item>After 2 min</item>
+        <item>After 5 min</item>
+        <item>After 10 min</item>
+        <item>After 15 min</item>
+        <item>After 20 min</item>
+        <item>After 30 min</item>
+        <item>Disabled</item>
+    </string-array>
+    <!-- Preferences -->
+
+
+    <!-- Switch button -->
+    <string name="switch_button_on">ON</string>
+    <string name="switch_button_off">OFF</string>
+    <!-- Switch button -->
+
+
+    <!-- Rescue -->
+    <string name="rescue_dialog_off_btn">DISABLE Alarm!</string>
+    <string name="rescue_dialog_cancel_btn">Close</string>
+    <string name="rescue_toast_time_disabled">This function is disabled in settings</string>
+    <string name="rescue_toast_already_stopped">Alarm is already stopped.</string>
+    <string name="rescue_activity_msg">You can disable current alarm by clicking on \'%1$s\' button or get back to puzzle by clicking on \'%2$s\'.</string>
+    <string name="rescue_stop">Stop</string>
+    <string name="rescue_back">Back</string>
+    <string name="rescue_toast_second">Second</string>
+    <string name="rescue_toast_seconds">Seconds</string>
+    <string name="rescue_toast_minute">Minute</string>
+    <string name="rescue_toast_minutes">Minutes</string>
+
+    <string-array name="rescue_toast_time_remain">
+        <item>Time remain: %2$s</item>
+        <item>Time remain: %1$s %2$s</item>
+    </string-array>
+    <!-- Rescue -->
+
+</resources>

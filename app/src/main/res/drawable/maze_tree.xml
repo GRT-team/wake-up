@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/maze_tree_1"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_tree_2"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_tree_3"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_tree_4"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_tree_5"
+        android:duration="1000"/>
+    <item
+        android:drawable="@drawable/maze_tree_6"
+        android:duration="1000"/>
+
+</animation-list>

@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.grt_team.wakeup.preferences.SummaryListPreference
+        android:defaultValue="@integer/pref_alarm_snooz_default"
+        android:entries="@array/snooze_time_titles"
+        android:entryValues="@array/snooze_time_values"
+        android:key="pref_alarm_snooz_time"
+        android:persistent="true"
+        android:title="@string/pref_alarm_snooz_title" />
+
+    <com.grt_team.wakeup.preferences.AlarmVolumeBarPreferences
+        android:defaultValue="auto"
+        android:summary="@string/pref_alarm_volume_summary"
+        android:title="@string/pref_alarm_volume_title" />
+
+    <com.grt_team.wakeup.preferences.SummaryListPreference
+        android:defaultValue="0"
+        android:entries="@array/rescue_time_titles"
+        android:entryValues="@array/rescue_time_values"
+        android:key="pref_rescue_time"
+        android:persistent="true"
+        android:title="@string/pref_rescue_time_title" />
+
+    <com.grt_team.wakeup.preferences.SummaryListPreference
+        android:defaultValue="@integer/pref_auto_turn_off_time_default"
+        android:entries="@array/auto_turn_off_time_titles"
+        android:entryValues="@array/auto_turn_off_time_values"
+        android:key="pref_auto_turn_off_time"
+        android:persistent="true"
+        android:title="@string/pref_auto_turn_off_time_title" />
+
+</PreferenceScreen>

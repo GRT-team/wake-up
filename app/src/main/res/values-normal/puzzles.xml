@@ -1,0 +1,5 @@
+<resources>
+
+    <integer name="maze_def_size">17</integer>
+
+</resources>

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.grt_team.wakeup"
+        minSdkVersion 8
+        targetSdkVersion 17
+
+        testApplicationId "com.grt_team.wakeup.test"
+        testInstrumentationRunner "pl.polidea.instrumentation.PolideaInstrumentationTestRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file("grtteamandroid.keystore")
+            storePassword "thiNg+mOn26"
+            keyAlias "grt team key"
+            keyPassword "thiNg+mOn26"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+    }
+    productFlavors{
+        googleplay{
+            resValue "string", "app_uri", "market://details?id="
+            resValue "string", "web_url", "http://play.google.com/store/apps/details?id="
+        }
+        amazon{
+            resValue "string", "app_uri", "amzn://apps/android?p="
+            resValue "string", "web_url", "http://www.amazon.com/gp/mas/dl/android?p="
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile files('libs/GoogleAdMobAdsSdk-6.3.0.jar')
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.0'
+    androidTestCompile files('libs/polidea_test_runner_1.3_2.jar')
+    androidTestCompile files('libs/xmltask.jar')
+}

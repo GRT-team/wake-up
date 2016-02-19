@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/puzzle_title_height"
+        android:background="@color/puzzle_title_bg" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/puzzle_mosaic_aim"
+            android:textColor="@color/puzzle_title_text_color" />
+
+        <include
+            android:layout_gravity="right"
+            layout="@layout/puzzle_rescure_button" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mosaic_pazle_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

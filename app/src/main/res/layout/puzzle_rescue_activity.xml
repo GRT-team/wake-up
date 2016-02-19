@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/rescue_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/puzzle_rescue_msg"
+        android:gravity="center"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textIsSelectable="false" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:stretchColumns="0,1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <com.grt_team.wakeup.view.SquareButton
+                android:id="@+id/rescue_btn_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/stop_btn_selector"
+                android:text="@string/rescue_stop"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/rescue_btn_text_size"
+                android:textStyle="bold" />
+
+            <com.grt_team.wakeup.view.SquareButton
+                android:id="@+id/rescue_btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/back_btn_selector"
+                android:text="@string/rescue_back"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/rescue_btn_text_size"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:id="@+id/ads_goes_here"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ad_max_height"
+                android:layout_gravity="center"
+                android:layout_span="2" >
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

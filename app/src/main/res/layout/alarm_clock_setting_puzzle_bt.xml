@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="?android:attr/listDivider" />
+
+    <ImageButton
+        android:id="@+id/alarm_clock_setting_show_puzzle"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:layout_gravity="center"
+        android:background="@android:drawable/list_selector_background"
+        android:contentDescription="@null"
+        android:src="@drawable/action_settings" />
+
+</LinearLayout>
