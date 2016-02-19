@@ -209,7 +209,6 @@ public class CatcherView extends PuzzleView {
     public void doDraw(Canvas canvas) {
 
         // Draw background
-        canvas.drawColor(Color.BLUE);
         canvas.drawBitmap(background, 0, 0, null);
 
         // Draw score
