@@ -30,5 +30,15 @@
             android:targetPackage="com.grt_team.wakeup" >
         </intent>
     </Preference>
+    <Preference
+        android:fragment="com.grt_team.wakeup.fragment.SettingsFragment$CatcherSettingsFragment"
+        android:summary="@string/puzzle_catcher_summary"
+        android:title="@string/puzzle_catcher_title" >
+        <intent
+            android:action="com.grt_team.wakeup.PREFS_PUZZLE_CATCHER"
+            android:targetClass="com.grt_team.wakeup.SettingsActivity"
+            android:targetPackage="com.grt_team.wakeup" >
+        </intent>
+    </Preference>
 
 </PreferenceScreen>

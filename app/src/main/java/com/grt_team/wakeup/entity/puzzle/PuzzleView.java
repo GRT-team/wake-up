@@ -116,7 +116,7 @@ public abstract class PuzzleView extends SurfaceView implements Callback {
 
     public void setRunningMode(boolean isRunning) {
         if (thread != null && thread.isAlive()) {
-            thread.setRunning(false);
+            thread.setRunning(isRunning);
         }
     }
 

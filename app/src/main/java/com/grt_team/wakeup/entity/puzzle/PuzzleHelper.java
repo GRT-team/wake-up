@@ -23,6 +23,7 @@ import com.grt_team.wakeup.SettingsActivity;
 import com.grt_team.wakeup.dialog.AlarmDialog;
 import com.grt_team.wakeup.dialog.FullScreenAlarmDialog;
 import com.grt_team.wakeup.entity.puzzle.card.CardPuzzle;
+import com.grt_team.wakeup.entity.puzzle.catcher.CatcherPuzzle;
 import com.grt_team.wakeup.entity.puzzle.maze.MazePuzzle;
 import com.grt_team.wakeup.entity.puzzle.mosaic.MosaicPuzzle;
 import com.grt_team.wakeup.entity.puzzle.random.RandomPuzzle;
@@ -33,6 +34,7 @@ public class PuzzleHelper {
     public static final String PUZZLE_MAZE = "maze";
     public static final String PUZZLE_MOSAIC = "mosaic";
     public static final String PUZZLE_CARDS = "cards";
+    public static final String PUZZLE_CATCHER = "catcher";
     public static final String PUZZLE_RANDOM = "random";
 
     private static Map<String, Class<? extends Puzzle>> puzzles;
@@ -43,6 +45,7 @@ public class PuzzleHelper {
         puzzles.put(PUZZLE_MAZE, MazePuzzle.class);
         puzzles.put(PUZZLE_MOSAIC, MosaicPuzzle.class);
         puzzles.put(PUZZLE_CARDS, CardPuzzle.class);
+        puzzles.put(PUZZLE_CATCHER, CatcherPuzzle.class);
         puzzles.put(PUZZLE_RANDOM, RandomPuzzle.class);
     }
 
@@ -57,6 +60,8 @@ public class PuzzleHelper {
                 context.getResources().getString(R.string.puzzle_mosaic_title));
         puzzleTitles.put(PUZZLE_CARDS,
                 context.getResources().getString(R.string.puzzle_card_title));
+        puzzleTitles.put(PUZZLE_CATCHER,
+                context.getResources().getString(R.string.puzzle_catcher_title));
         puzzleTitles.put(PUZZLE_RANDOM,
                 context.getResources().getString(R.string.puzzle_random_title));
     }
