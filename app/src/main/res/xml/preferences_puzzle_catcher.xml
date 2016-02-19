@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sb="http://schemas.android.com/apk/res/com.grt_team.wakeup" >
+    <Preference
+        android:summary="@string/pref_puzzle_preview_summary"
+        android:title="@string/pref_puzzle_preview_title" >
+        <intent
+            android:targetClass="com.grt_team.wakeup.entity.puzzle.PuzzleActivityPreview"
+            android:targetPackage="com.grt_team.wakeup" >
+            <extra
+                android:name="puzzleName"
+                android:value="catcher" />
+            <extra
+                android:name="puzzlePreviewMode"
+                android:value="true" />
+        </intent>
+    </Preference>
+
+    <com.grt_team.wakeup.preferences.SeekBarPreferences
+        android:defaultValue="5"
+        android:key="pref_catcher_to_catch"
+        android:title="@string/pref_puzzle_catcher_task_count_title"
+        sb:max="25"
+        sb:min="5"
+        sb:summaryFormat="@string/pref_puzzle_catcher_task_count_summary" />
+
+    <com.grt_team.wakeup.preferences.SeekBarPreferences
+        android:defaultValue="1"
+        android:key="pref_catcher_speed"
+        android:title="@string/pref_catcher_speed_title"
+        sb:max="10"
+        sb:min="1"
+        sb:summaryFormat="@string/pref_puzzle_catcher_speed_summary"/>
+
+    <com.grt_team.wakeup.preferences.SummaryListPreference
+        android:defaultValue="3"
+        android:entries="@array/puzzle_catcher_bucket_size"
+        android:entryValues="@array/puzzle_catcher_bucket_size_values"
+        android:key="pref_catcher_bucket_size"
+        android:persistent="true"
+        android:title="@string/pref_catcher_bucket_size"/>
+</PreferenceScreen>

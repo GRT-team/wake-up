@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="polidea_test_runner_1.3_2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/polidea_test_runner_1.3_2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

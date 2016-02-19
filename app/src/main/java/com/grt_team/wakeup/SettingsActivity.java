@@ -1,8 +1,6 @@
 
 package com.grt_team.wakeup;
 
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -16,8 +14,9 @@ import android.support.v4.app.TaskStackBuilder;
 
 import com.actionbarsherlock.app.SherlockPreferenceActivity;
 import com.actionbarsherlock.view.MenuItem;
-import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.fragment.SettingsFragment;
+
+import java.util.List;
 
 public class SettingsActivity extends SherlockPreferenceActivity {
 
@@ -28,6 +27,7 @@ public class SettingsActivity extends SherlockPreferenceActivity {
     public static String ACTION_PREFS_PUZZLE_MAZE = PACKAGE.concat(".PREFS_PUZZLE_MAZE");
     public static String ACTION_PREFS_PUZZLE_MOSAIC = PACKAGE.concat(".PREFS_PUZZLE_MOSAIC");
     public static String ACTION_PREFS_PUZZLE_CARDS = PACKAGE.concat(".PREFS_PUZZLE_CARDS");
+    public static String ACTION_PREFS_PUZZLE_CATCHER = PACKAGE.concat(".PREFS_PUZZLE_CATCHER");
 
     /**
      * Indicate which header should be highlighted. Id must be long.
@@ -52,6 +52,9 @@ public class SettingsActivity extends SherlockPreferenceActivity {
         public static final String CARDS_TASK_NUMBER = "pref_puzzle_cards_task_number";
         public static final String CARDS_SHUFFLE = "pref_puzzle_cards_shuffle";
         public static final String CARDS_DECK_SIZE = "pref_puzzle_cards_deck_size";
+        public static final String CATCHER_TO_CATCH = "pref_catcher_to_catch";
+        public static final String CATCHER_SPEED = "pref_catcher_speed";
+        public static final String CATCHER_BUCKET_SIZE = "pref_catcher_bucket_size";
     }
 
     public static final class PREF_ALARM {
@@ -145,6 +148,8 @@ public class SettingsActivity extends SherlockPreferenceActivity {
                 addPreferencesFromResource(R.xml.preferences_puzzle_mosaic);
             } else if (ACTION_PREFS_PUZZLE_CARDS.equals(action)) {
                 addPreferencesFromResource(R.xml.preferences_puzzle_cards);
+            } else if (ACTION_PREFS_PUZZLE_CATCHER.equals(action)) {
+                addPreferencesFromResource(R.xml.preferences_puzzle_catcher);
             }
         } else {
             if (!getResources().getBoolean(R.bool.has_two_panes)) {
@@ -167,6 +172,8 @@ public class SettingsActivity extends SherlockPreferenceActivity {
             return R.string.puzzle_mosaic_title;
         } else if (ACTION_PREFS_PUZZLE_CARDS.equals(action)) {
             return R.string.puzzle_card_title;
+        } else if (ACTION_PREFS_PUZZLE_CATCHER.equals(action)) {
+            return R.string.puzzle_catcher_title;
         }
         return 0;
     }
@@ -197,6 +204,7 @@ public class SettingsActivity extends SherlockPreferenceActivity {
         PreferenceManager.setDefaultValues(context, R.xml.preferences_puzzle_maze, readAgain);
         PreferenceManager.setDefaultValues(context, R.xml.preferences_puzzle_mosaic, readAgain);
         PreferenceManager.setDefaultValues(context, R.xml.preferences_puzzle_cards, readAgain);
+        PreferenceManager.setDefaultValues(context, R.xml.preferences_puzzle_catcher, readAgain);
     }
 
     public static SharedPreferences getPref(Context context) {
@@ -229,7 +237,8 @@ public class SettingsActivity extends SherlockPreferenceActivity {
 
                     if (ACTION_PREFS_PUZZLE_MAZE.equals(action)
                             || ACTION_PREFS_PUZZLE_MOSAIC.equals(action)
-                            || ACTION_PREFS_PUZZLE_CARDS.equals(action)) {
+                            || ACTION_PREFS_PUZZLE_CARDS.equals(action)
+                            || ACTION_PREFS_PUZZLE_CATCHER.equals(action)) {
                         builder.addNextIntent(buildOnePaneUpIntent(action));
                     }
                     builder.startActivities();
@@ -244,7 +253,7 @@ public class SettingsActivity extends SherlockPreferenceActivity {
 
     /**
      * Build appropriate upIntent for navigation.
-     * 
+     *
      * @param currentAction
      * @return
      */
@@ -256,6 +265,7 @@ public class SettingsActivity extends SherlockPreferenceActivity {
                 || ACTION_PREFS_PUZZLE.equals(currentAction)) {
             i.setAction(null);
         } else if (ACTION_PREFS_PUZZLE_CARDS.equals(currentAction)
+                || ACTION_PREFS_PUZZLE_CATCHER.equals(currentAction)
                 || ACTION_PREFS_PUZZLE_MAZE.equals(currentAction)
                 || ACTION_PREFS_PUZZLE_MOSAIC.equals(currentAction)) {
             i.setAction(ACTION_PREFS_PUZZLE);

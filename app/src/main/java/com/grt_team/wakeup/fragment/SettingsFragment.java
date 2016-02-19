@@ -78,4 +78,17 @@ public class SettingsFragment extends WakeUpPreferenceFragment {
         }
     }
 
+    public static class CatcherSettingsFragment extends WakeUpPreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.preferences_puzzle_catcher);
+        }
+
+        @Override
+        public String getPreferenceAction() {
+            return SettingsActivity.ACTION_PREFS_PUZZLE_CATCHER;
+        }
+    }
+
 }
