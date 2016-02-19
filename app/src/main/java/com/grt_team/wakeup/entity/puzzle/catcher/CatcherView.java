@@ -26,6 +26,7 @@ public class CatcherView extends PuzzleView {
 
     private long APPLE_GENERATION_INTERVAL = 1000 * 2;  // 2 seconds
     private long BANANA_GENERATION_INTERVAL = 1000 * 6;  // 6 seconds
+    private int FAIL_ANIMATION_DURATION = 15;        // number of frames
     final int deltaHide = 30; // %
     final double scaleBucket = 0.06;
     final double scaleApple = 0.05;
@@ -52,6 +53,7 @@ public class CatcherView extends PuzzleView {
     private int toCatch;
     private int speed;
     private int bucketSize;
+    private int failOverlay = -1;
     private Integer caught;
     private Paint textPaint;
 
@@ -60,6 +62,8 @@ public class CatcherView extends PuzzleView {
     private long interval = APPLE_GENERATION_INTERVAL;
     private OnAllApplesCaughtListener listener;
     private boolean running = true;
+    private Paint overlay;
+    private final int overlayTransparancyStep = 80 / FAIL_ANIMATION_DURATION;
 
     public CatcherView(Context context) {
         super(context);
@@ -112,6 +116,8 @@ public class CatcherView extends PuzzleView {
                 bananaHeight,
                 false);
 
+        overlay = new Paint();
+        overlay.setColor(Color.RED);
     }
 
     @Override
@@ -133,6 +139,7 @@ public class CatcherView extends PuzzleView {
             // Banana caught
             if (bananaPos.y >= bucketY + bucket.getHeight() / 2
                     && bananaPos.x > bucketX && bananaPos.x + apple.getWidth() < bucketX + bucket.getWidth()) {
+                failOverlay = FAIL_ANIMATION_DURATION;
                 caught = 0;
                 bananaPos = null;
             } else if (bananaPos.y + banana.getHeight() >= screenHeight) {
@@ -157,6 +164,7 @@ public class CatcherView extends PuzzleView {
 
             // if apple missed start again
             if (p.y + apple.getHeight() >= screenHeight) {
+                failOverlay = FAIL_ANIMATION_DURATION;
                 interval = APPLE_GENERATION_INTERVAL;
                 caught = 0;
                 i.remove();
@@ -222,6 +230,13 @@ public class CatcherView extends PuzzleView {
 
         // Draw bucket
         canvas.drawBitmap(bucket, bucketX, bucketY, null);
+
+        // Draw failure overlay
+        if (failOverlay >= 0) {
+            overlay.setAlpha(overlayTransparancyStep * failOverlay);
+            canvas.drawRect(0, 0, screenWidth, screenHeight, overlay);
+            failOverlay--;
+        }
     }
 
     @Override
