@@ -6,6 +6,7 @@
     <!-- Default values -->
 
     <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">36sp</dimen>
 
     <!-- Other dimensions -->
     <dimen name="list_padding">16dp</dimen>

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Created by oleh on 2/16/16.
@@ -24,6 +25,7 @@ import java.util.Random;
 public class CatcherView extends PuzzleView {
 
 
+    private final int textHeight;
     private long APPLE_GENERATION_INTERVAL = 1000 * 2;  // 2 seconds
     private long BANANA_GENERATION_INTERVAL = 1000 * 6;  // 6 seconds
     private int FAIL_ANIMATION_DURATION = 15;        // number of frames
@@ -48,7 +50,7 @@ public class CatcherView extends PuzzleView {
     private int bucketOffsetX;
     private int bucketDelta;
 
-    private List<Point> apples = new ArrayList<Point>();
+    private ConcurrentLinkedQueue<Point> apples = new ConcurrentLinkedQueue<Point>();
     private Point bananaPos;
     private int toCatch;
     private int speed;
@@ -74,7 +76,8 @@ public class CatcherView extends PuzzleView {
 
         textPaint = new Paint();
         textPaint.setColor(Color.RED);
-        textPaint.setTextSize(50);
+        textHeight = context.getResources().getDimensionPixelSize(R.dimen.text_size_large);
+        textPaint.setTextSize(textHeight);
 
         lastBananaGeneratedTime = System.currentTimeMillis();
     }
@@ -215,9 +218,9 @@ public class CatcherView extends PuzzleView {
         if (caught == null) {
             caught = 0;
         }
-        canvas.drawText(Integer.toString(toCatch - caught), 15, 50, textPaint);
+        canvas.drawText(Integer.toString(toCatch - caught), 15, textHeight, textPaint);
 
-        // Draw apples
+        // Draw applesq
         for (Point p : apples) {
             canvas.drawBitmap(apple, p.x, p.y, null);
         }
