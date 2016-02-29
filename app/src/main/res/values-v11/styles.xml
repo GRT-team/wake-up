@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="activated" parent="Theme.Sherlock.Light">
+    <style name="activated" parent="Theme.AppCompat.Light">
         <item name="android:background">?android:attr/activatedBackgroundIndicator</item>
     </style>
 

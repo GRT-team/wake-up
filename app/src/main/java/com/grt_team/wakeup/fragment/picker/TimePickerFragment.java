@@ -6,13 +6,13 @@ import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.text.format.DateFormat;
 import android.widget.TimePicker;
 
-import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment;
 
-public class TimePickerFragment extends SherlockDialogFragment {
+public class TimePickerFragment extends DialogFragment {
 
 	public final static String ARG_TIME = "TIME";
 

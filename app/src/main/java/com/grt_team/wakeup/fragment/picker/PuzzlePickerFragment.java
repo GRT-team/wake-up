@@ -2,13 +2,13 @@ package com.grt_team.wakeup.fragment.picker;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 
-import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.grt_team.wakeup.entity.puzzle.PuzzleHelper;
 import com.grt_team.wakeup.entity.puzzle.PuzzleHelper.OnPuzzleSelectedListener;
 import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment;
 
-public class PuzzlePickerFragment extends SherlockDialogFragment {
+public class PuzzlePickerFragment extends DialogFragment {
 	
 	public final static String ARG_PUZZLE_NAME = "ARG_PUZZLE_NAME";
 	

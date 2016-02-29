@@ -3,13 +3,13 @@ package com.grt_team.wakeup.fragment.picker;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 
-import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment;
 import com.grt_team.wakeup.utils.DayOfWeekHelper;
 import com.grt_team.wakeup.utils.DayOfWeekHelper.OnDayOfWeekChanged;
 
-public class DayPickerFragment extends SherlockDialogFragment {
+public class DayPickerFragment extends DialogFragment {
 	
 	public final static String ARG_DAYS = "ARG_DAYS";
 	

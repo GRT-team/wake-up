@@ -1,11 +1,6 @@
 
 package com.grt_team.wakeup.fragment;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.ContentValues;
 import android.content.Context;
@@ -13,12 +8,12 @@ import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TimePicker;
 
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.database.AlarmClockDatasource;
 import com.grt_team.wakeup.database.AlarmClockTable;
@@ -27,12 +22,17 @@ import com.grt_team.wakeup.fragment.adapter.AlarmClockSettingAdapter;
 import com.grt_team.wakeup.fragment.picker.DayPickerFragment;
 import com.grt_team.wakeup.fragment.picker.PuzzlePickerFragment;
 import com.grt_team.wakeup.fragment.picker.SoundPickerFragment;
-import com.grt_team.wakeup.fragment.picker.TimePickerFragment;
 import com.grt_team.wakeup.fragment.picker.SoundPickerFragment.OnSoundChangeListener;
+import com.grt_team.wakeup.fragment.picker.TimePickerFragment;
 import com.grt_team.wakeup.utils.AlarmHelper;
 import com.grt_team.wakeup.utils.DayOfWeekHelper.OnDayOfWeekChanged;
 
-public class AlarmClockSettingListFragment extends SherlockListFragment implements
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AlarmClockSettingListFragment extends ListFragment implements
         OnItemClickListener, OnTimeSetListener, OnDayOfWeekChanged,
         OnPuzzleSelectedListener, OnSoundChangeListener {
 
@@ -100,7 +100,7 @@ public class AlarmClockSettingListFragment extends SherlockListFragment implemen
             item = createItem(AlarmClockSettingAdapter.TYPE_ENABLE, R.drawable.music_volume,
                     R.string.alarm_setting_enable_title, value);
             alarmSetting.add(item);
-            value = new int[] {
+            value = new int[]{
                     c.getInt(c.getColumnIndex(AlarmClockTable.HOUR)),
                     c.getInt(c.getColumnIndex(AlarmClockTable.MINUTES))
             };
@@ -137,7 +137,7 @@ public class AlarmClockSettingListFragment extends SherlockListFragment implemen
 
     @Override
     public void onItemClick(AdapterView<?> parent, final View view,
-            int position, long id) {
+                            int position, long id) {
         Bundle data = new Bundle();
         data.putInt(FRAGMENT_ID, getId());
         switch ((int) id) {
@@ -282,7 +282,7 @@ public class AlarmClockSettingListFragment extends SherlockListFragment implemen
         data.updateAlarm(clockId, clock);
 
         ListItem item = alarmSetting.get(AlarmClockSettingAdapter.TYPE_TIME);
-        item.setValue(new int[] {
+        item.setValue(new int[]{
                 hourOfDay, minute
         });
 

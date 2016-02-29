@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/save_menu_item"
-        style="@style/Widget.Sherlock.ActionBar.TabText"
+        style="@style/Widget.AppCompat.ActionBar.TabText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/clock_setting_menu_item"

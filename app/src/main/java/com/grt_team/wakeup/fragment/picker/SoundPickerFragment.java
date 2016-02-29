@@ -12,6 +12,7 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 import android.widget.AbsListView;
@@ -20,13 +21,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockDialogFragment;
 import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment;
 import com.grt_team.wakeup.utils.SoundHelper;
 import com.grt_team.wakeup.utils.SoundHelper.AudioSource;
 
-public class SoundPickerFragment extends SherlockDialogFragment implements DialogInterface.OnClickListener,
+public class SoundPickerFragment extends DialogFragment implements DialogInterface.OnClickListener,
         View.OnClickListener, OnItemClickListener, OnCompletionListener {
 
     public final static String ARG_SOUND = "ARG_SOUND";
