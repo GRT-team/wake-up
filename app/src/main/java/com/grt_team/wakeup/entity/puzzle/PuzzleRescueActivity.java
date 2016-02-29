@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
 import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.SettingsActivity;
 import com.grt_team.wakeup.services.AudioService;
@@ -22,7 +19,6 @@ import com.grt_team.wakeup.utils.ToastHelper;
 public class PuzzleRescueActivity extends Activity {
 
     private boolean preview;
-    private final static String AD_ID = "a1511e4beeb59fa";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,22 +100,6 @@ public class PuzzleRescueActivity extends Activity {
             }
         });
 
-        AdView adView = new AdView(this, getAppropriateSize(), AD_ID);
-        AdRequest adRequest = new AdRequest();
-        ViewGroup viewGroup = (ViewGroup) findViewById(R.id.ads_goes_here);
-        viewGroup.addView(adView);
-        adView.loadAd(adRequest);
-    }
-
-    private AdSize getAppropriateSize() {
-        AdSize adSize = AdSize.BANNER;
-        int width = DisplayHelper.getScreenWidth(this);
-        if (AdSize.IAB_LEADERBOARD.getWidthInPixels(this) <= width) {
-            adSize = AdSize.IAB_LEADERBOARD;
-        } else if (AdSize.IAB_BANNER.getWidthInPixels(this) <= width) {
-            adSize = AdSize.IAB_BANNER;
-        }
-        return adSize;
     }
 
     private void restorePuzzle() {
