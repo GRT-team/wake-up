@@ -41,8 +41,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile files('libs/GoogleAdMobAdsSdk-6.3.0.jar')
+    compile 'com.android.support:appcompat-v7:23.2.0'
     androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.0'
     androidTestCompile files('libs/polidea_test_runner_1.3_2.jar')
     androidTestCompile files('libs/xmltask.jar')
