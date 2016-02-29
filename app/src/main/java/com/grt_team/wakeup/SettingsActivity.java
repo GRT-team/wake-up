@@ -13,13 +13,14 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.view.MenuItem;
 
-import com.actionbarsherlock.app.SherlockPreferenceActivity;
-import com.actionbarsherlock.view.MenuItem;
-import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.fragment.SettingsFragment;
+import com.grt_team.wakeup.preferences.support.AppCompatPreferenceActivity;
 
-public class SettingsActivity extends SherlockPreferenceActivity {
+import java.util.List;
+
+public class SettingsActivity extends AppCompatPreferenceActivity {
 
     private static final String PACKAGE = "com.grt_team.wakeup";
 
@@ -148,7 +149,7 @@ public class SettingsActivity extends SherlockPreferenceActivity {
             }
         } else {
             if (!getResources().getBoolean(R.bool.has_two_panes)) {
-                getActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
             if (headerHighlight != null) {
                 headerHighlight.highlight(getIntent());

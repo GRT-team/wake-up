@@ -110,7 +110,7 @@ public class AlarmVolumeBarPreferences extends DialogPreference implements OnSee
     protected void onDialogClosed(boolean positiveResult) {
         if (positiveResult) {
             getContext().getContentResolver().notifyChange(
-                    Settings.System.getUriFor(Settings.System.VOLUME_ALARM), null);
+                    Settings.System.getUriFor("volume_alarm"), null);
             currentVolumeIndex = newVolumeIndex;
         } else {
             audioManager.setStreamVolume(AudioManager.STREAM_ALARM, currentVolumeIndex, 0);

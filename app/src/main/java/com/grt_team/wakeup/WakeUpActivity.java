@@ -1,8 +1,6 @@
 
 package com.grt_team.wakeup;
 
-import java.util.Calendar;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,15 +10,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
 import com.grt_team.wakeup.fragment.AlarmClockListFragment;
 import com.grt_team.wakeup.fragment.AlarmClockListFragment.OnClockSelectedListener;
 import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment;
@@ -28,8 +24,10 @@ import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment.onClockSetting
 import com.grt_team.wakeup.utils.AlarmHelper;
 import com.grt_team.wakeup.utils.SharedPreferenceUtil;
 
-public class WakeUpActivity extends SherlockFragmentActivity implements
-        OnClockSelectedListener, onClockSettingChangeListener, OnMenuItemClickListener {
+import java.util.Calendar;
+
+public class WakeUpActivity extends AppCompatActivity implements
+        OnClockSelectedListener, onClockSettingChangeListener, MenuItem.OnMenuItemClickListener {
 
     public static final int ALARM_NOTIFICATION = 1;
 
@@ -74,7 +72,7 @@ public class WakeUpActivity extends SherlockFragmentActivity implements
         if (nextFeedbackTime == 0) {
             Calendar calendar = Calendar.getInstance();
             calendar.add(Calendar.DAY_OF_YEAR, 3); // show next dialog after 3
-                                                   // days
+            // days
             SharedPreferenceUtil.saveNextFeedbackTime(getApplicationContext(),
                     calendar.getTimeInMillis());
         } else if (System.currentTimeMillis() >= SharedPreferenceUtil.getNextFeedbackTime(this)) {
@@ -94,7 +92,7 @@ public class WakeUpActivity extends SherlockFragmentActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.clock_menu, menu);
+        getMenuInflater().inflate(R.menu.clock_menu, menu);
         for (int i = 0; i < menu.size(); i++) {
             menu.getItem(i).setOnMenuItemClickListener(this);
         }

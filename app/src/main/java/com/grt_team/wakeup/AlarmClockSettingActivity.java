@@ -4,23 +4,21 @@ package com.grt_team.wakeup;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuItem.OnMenuItemClickListener;
-import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.entity.puzzle.PuzzleHelper;
 import com.grt_team.wakeup.fragment.AlarmClockListFragment;
 import com.grt_team.wakeup.fragment.AlarmClockSettingListFragment;
 import com.grt_team.wakeup.utils.AlarmHelper;
 import com.grt_team.wakeup.utils.AlarmHelper.OnClockDeleteListener;
 
-public class AlarmClockSettingActivity extends SherlockFragmentActivity implements OnMenuItemClickListener, OnClockDeleteListener {
+public class AlarmClockSettingActivity extends AppCompatActivity implements  OnClockDeleteListener, MenuItem.OnMenuItemClickListener {
 
     long clockId;
 
@@ -35,7 +33,7 @@ public class AlarmClockSettingActivity extends SherlockFragmentActivity implemen
         setContentView(R.layout.alarm_clock_setting);
 
         ActionBar bar = getSupportActionBar();
-        bar.setDisplayHomeAsUpEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(false);
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View customActionBarView = inflater.inflate(R.layout.alarm_clock_setting_action_bar,
                 null);
@@ -65,7 +63,7 @@ public class AlarmClockSettingActivity extends SherlockFragmentActivity implemen
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportMenuInflater().inflate(R.menu.clock_setting_menu, menu);
+        getMenuInflater().inflate(R.menu.clock_setting_menu, menu);
         for (int i = 0; i < menu.size(); i++) {
             menu.getItem(i).setOnMenuItemClickListener(this);
         }

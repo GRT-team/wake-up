@@ -1,11 +1,10 @@
 
 package com.grt_team.wakeup.fragment;
 
-import java.util.Calendar;
-
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.ListFragment;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.text.format.DateFormat;
 import android.view.ContextMenu;
@@ -21,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockListFragment;
 import com.grt_team.wakeup.R;
 import com.grt_team.wakeup.database.AlarmClockDatasource;
 import com.grt_team.wakeup.database.AlarmClockTable;
@@ -31,7 +29,9 @@ import com.grt_team.wakeup.utils.AlarmHelper.OnClockDeleteListener;
 import com.grt_team.wakeup.utils.DayOfWeekHelper;
 import com.grt_team.wakeup.utils.SoundHelper;
 
-public class AlarmClockListFragment extends SherlockListFragment implements
+import java.util.Calendar;
+
+public class AlarmClockListFragment extends ListFragment implements
         OnItemClickListener, OnClockDeleteListener, SimpleCursorAdapter.ViewBinder {
 
     public final static String CLOCK_ID = "CLOCK_ID";
@@ -44,7 +44,7 @@ public class AlarmClockListFragment extends SherlockListFragment implements
 
     int selectedClockPos = 0;
 
-    private String[] columns = new String[] {
+    private String[] columns = new String[]{
             AlarmClockTable.ENABLED,
             AlarmClockTable.HOUR,
             AlarmClockTable.MINUTES,
@@ -53,7 +53,7 @@ public class AlarmClockListFragment extends SherlockListFragment implements
             AlarmClockTable.SOUND
     };
 
-    private int[] ids = new int[] {
+    private int[] ids = new int[]{
             R.id.alarm_enable,
             R.id.alarm_time,
             R.id.alarm_time,
@@ -111,7 +111,7 @@ public class AlarmClockListFragment extends SherlockListFragment implements
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view,
-            int position, long id) {
+                            int position, long id) {
         selectedClockPos = position;
         if (null != clockSelectedListener) {
             clockSelectedListener.onClockSelected(id);
@@ -120,7 +120,7 @@ public class AlarmClockListFragment extends SherlockListFragment implements
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v,
-            ContextMenuInfo menuInfo) {
+                                    ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         getActivity().getMenuInflater().inflate(R.menu.clock_contextual_menu, menu);
         menu.setHeaderIcon(android.R.drawable.ic_menu_recent_history);
@@ -160,7 +160,7 @@ public class AlarmClockListFragment extends SherlockListFragment implements
                 btn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView,
-                            boolean isChecked) {
+                                                 boolean isChecked) {
                         updateClockState(id, isChecked);
                     }
                 });
@@ -235,7 +235,7 @@ public class AlarmClockListFragment extends SherlockListFragment implements
 
     /**
      * Set listener for event when clock is selected in two pane mode.
-     * 
+     *
      * @param listener
      */
     public void setOnClockSelectedListener(OnClockSelectedListener listener) {
@@ -250,8 +250,8 @@ public class AlarmClockListFragment extends SherlockListFragment implements
 
     /**
      * Enable or disable clock by specified id
-     * 
-     * @param id - the clock id
+     *
+     * @param id      - the clock id
      * @param enabled - enable or disable clock
      */
     private void updateClockState(long id, boolean enabled) {

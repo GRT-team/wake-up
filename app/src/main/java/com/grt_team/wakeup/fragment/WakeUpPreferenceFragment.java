@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
 import com.grt_team.wakeup.R;
+import com.grt_team.wakeup.preferences.support.AppCompatPreferenceActivity;
 
 /**
  * Wrapper for standard PreferenceFragment. It enable two home button as up and
@@ -23,7 +24,7 @@ public abstract class WakeUpPreferenceFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (!getResources().getBoolean(R.bool.has_two_panes)) {
-            getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+            ((AppCompatPreferenceActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 
