@@ -1,9 +1,6 @@
 
 package com.grt_team.wakeup.utils;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
@@ -13,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -27,6 +25,9 @@ import com.grt_team.wakeup.dialog.AlarmDialog;
 import com.grt_team.wakeup.dialog.FullScreenAlarmDialog;
 import com.grt_team.wakeup.entity.puzzle.PuzzleActivity;
 import com.grt_team.wakeup.services.AudioService;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class AlarmHelper {
 
@@ -86,14 +87,13 @@ public class AlarmHelper {
     }
 
     public static void scheduleAutoTurnOff(Context context, long clockId, Calendar time) {
-        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, AlarmReceiver.class);
         intent.setAction(AlarmReceiver.ACTION_AUTO_TURN_OFF);
         intent.setData(getDataUri(clockId));
 
         PendingIntent pi = PendingIntent.getBroadcast(context, (int) clockId, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
-        am.set(AlarmManager.RTC_WAKEUP, time.getTimeInMillis(), pi);
+        setAlarm(context, time.getTimeInMillis(), pi);
     }
 
     public static void unScheduleAutoTurnOff(Context context, long clockId) {
@@ -109,7 +109,7 @@ public class AlarmHelper {
     }
 
     public static void stopAlarm(Context context, long clockId,
-            boolean scheduleNext) {
+                                 boolean scheduleNext) {
         if (scheduleNext) {
             scheduleNextAlarmById(context, clockId, false);
         }
@@ -159,7 +159,7 @@ public class AlarmHelper {
     }
 
     private static void scheduleNextAlarmByCursor(Context context, Cursor c,
-            AlarmClockDatasource data, long clockId, boolean oneTimeAlarm) {
+                                                  AlarmClockDatasource data, long clockId, boolean oneTimeAlarm) {
         boolean enabled = c.getInt(c.getColumnIndex(AlarmClockTable.ENABLED)) != 0;
         int dayOfWeek = c.getInt(c.getColumnIndex(AlarmClockTable.DAY_OF_WEEK));
 
@@ -188,7 +188,7 @@ public class AlarmHelper {
     }
 
     public static boolean scheduleNextAlarmById(Context context, long clockId,
-            boolean oneTimeAlarm) {
+                                                boolean oneTimeAlarm) {
         boolean result = false;
         AlarmClockDatasource data = new AlarmClockDatasource(context);
         Cursor c = data.getAlarmById(clockId);
@@ -207,21 +207,19 @@ public class AlarmHelper {
     }
 
     public static void scheduleAlarm(Context context, Calendar time,
-            long clockId) {
-        AlarmManager am = (AlarmManager) context
-                .getSystemService(Context.ALARM_SERVICE);
+                                     long clockId) {
         Intent intent = new Intent(context, AlarmReceiver.class);
         intent.setAction(AlarmReceiver.ACTION_ALARM);
         intent.setData(getDataUri(clockId));
 
         PendingIntent pi = PendingIntent.getBroadcast(context, (int) clockId, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
-        am.set(AlarmManager.RTC_WAKEUP, time.getTimeInMillis(), pi);
+        setAlarm(context, time.getTimeInMillis(), pi);
         SharedPreferenceUtil.removeAlarmClockSnoozeTime(context, clockId);
         Log.i(TAG,
                 "Next alarm will be started after: "
                         + String.valueOf((time.getTimeInMillis() - new Date()
-                                .getTime()) / 1000) + " seconds. Time: "
+                        .getTime()) / 1000) + " seconds. Time: "
                         + new Date(time.getTimeInMillis()).toString());
     }
 
@@ -283,7 +281,7 @@ public class AlarmHelper {
     }
 
     public static void showAlarmDialog(Context context, Uri data,
-            boolean finished, boolean fullScreen) {
+                                       boolean finished, boolean fullScreen) {
         Intent i = getDialogIntent(context, data, finished, fullScreen);
         context.startActivity(i);
     }
@@ -319,7 +317,7 @@ public class AlarmHelper {
     }
 
     public static void deleteAlarmClock(final Context context, final long id,
-            final OnClockDeleteListener listener) {
+                                        final OnClockDeleteListener listener) {
         if (AudioService.isBusy() && AudioService.getCurrentClockId() == id) {
             ToastHelper.showToast(context, context.getString(R.string.delete_alarm_busy_msg),
                     Toast.LENGTH_LONG);
@@ -341,6 +339,19 @@ public class AlarmHelper {
                             }).setNegativeButton(android.R.string.cancel, null)
                     .show();
         }
+    }
+
+    private static void setAlarm(Context context, long time, PendingIntent intent) {
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, time, intent);
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            am.setExact(AlarmManager.RTC_WAKEUP, time, intent);
+        } else {
+            am.set(AlarmManager.RTC_WAKEUP, time, intent);
+        }
+
     }
 
     public static interface OnClockDeleteListener {
