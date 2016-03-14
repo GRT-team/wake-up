@@ -36,7 +36,7 @@ public class AudioService extends Service {
 
     public static final float MAX_VOLUME = 1;
     public static final float HALF_VOLUME = 0.5f;
-    public static final float MIN_VOLUME = 0.1f;
+    public static final float MIN_VOLUME = 0f;
 
     private static final long[] VIBRATOR_PATTERN = {
             0, 200, 500
